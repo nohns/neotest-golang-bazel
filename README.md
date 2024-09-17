@@ -61,7 +61,7 @@ return {
     config = function()
       require("neotest").setup({
         adapters = {
-          require("neotest-golang"), -- Registration
+          require("neotest-golang-bazel"), -- Registration
         },
       })
     end,
@@ -92,7 +92,7 @@ local config = { -- Specify configuration
 }
 require("neotest").setup({
   adapters = {
-    require("neotest-golang")(config), -- Apply configuration
+    require("neotest-golang-bazel")(config), -- Apply configuration
   },
 })
 ```
@@ -116,7 +116,7 @@ Then set `dap_go_enabled` to `true`:
 local config = { dap_go_enabled = true } -- Specify configuration
 require("neotest").setup({
   adapters = {
-    require("neotest-golang")(config), -- Apply configuration
+    require("neotest-golang-bazel")(config), -- Apply configuration
   },
 })
 ```
